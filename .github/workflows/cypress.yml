@@ -16,3 +16,8 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
+    env:
+      CYPRESS_NHS_NUMBER: ${{ secrets.CYPRESS_NHS_NUMBER }}
+      CYPRESS_DOB_DAY: ${{ secrets.CYPRESS_DOB_DAY }}
+      CYPRESS_DOB_MONTH: ${{ secrets.CYPRESS_DOB_MONTH }}
+      CYPRESS_DOB_YEAR: ${{ secrets.CYPRESS_DOB_YEAR }}
