@@ -21,8 +21,8 @@ jobs:
         uses: ShaunLWM/action-pushbullet@master
         env:
           PB_TOKEN: ${{ secrets.PB_TOKEN }}
-          PB_TITLE: NHS Booking Cypress Failed!
-          PB_TEXT: NHS Booking Cypress Failed! Can you book an appointment?
+          PB_TITLE: NHS Booking Check Failed!
+          PB_TEXT: Can you book an appointment? "https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/book-coronavirus-vaccination/"
     env:
       CYPRESS_NHS_NUMBER: ${{ secrets.CYPRESS_NHS_NUMBER }}
       CYPRESS_DOB_DAY: ${{ secrets.CYPRESS_DOB_DAY }}
