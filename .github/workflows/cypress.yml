@@ -16,6 +16,13 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
+      - name: The job has failed
+        if: ${{ failure() }}
+        uses: ShaunLWM/action-pushbullet@master
+        env:
+          PB_TOKEN: ${{ secrets.PB_TOKEN }}
+          PB_TITLE: NHS Booking Cypress Failed!
+          PB_TEXT: NHS Booking Cypress Failed! Can you book an appointment?
     env:
       CYPRESS_NHS_NUMBER: ${{ secrets.CYPRESS_NHS_NUMBER }}
       CYPRESS_DOB_DAY: ${{ secrets.CYPRESS_DOB_DAY }}
